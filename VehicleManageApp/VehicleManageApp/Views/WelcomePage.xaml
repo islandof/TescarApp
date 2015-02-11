@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VehicleManageApp.Views.WelcomePage"
+             xmlns:local="clr-namespace:VehicleManageApp;assembly=VehicleManageApp"
+             BindingContext="{x:Static local:App.WelcomeViewModel}">
+  <StackLayout
+    VerticalOptions="Center">
+    <Frame>
+      <Label Text="欢迎来到腾兴车联" Font="Bold,Large" HorizontalOptions="Center"/>
+    </Frame>
+    <Button Text="登陆" Clicked="OnButtonClicked" HorizontalOptions="Center"/>
+  </StackLayout>
+</ContentPage>

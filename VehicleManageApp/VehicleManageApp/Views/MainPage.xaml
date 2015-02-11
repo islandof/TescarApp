@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VehicleManageApp.Views.MainPage"
+             xmlns:local="clr-namespace:VehicleManageApp.Views;assembly=VehicleManageApp" >
+  <TabbedPage.Children >
+    <local:MonitorCentre Title="监控中心" Icon="monitor.ico"/>
+    <local:CarManage Title="车队管理" Icon="carmanage.ico"/>
+    <local:WelcomePage Title="消息中心" Icon="messagecentre.ico"/>
+  </TabbedPage.Children>
+</TabbedPage>
