@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VehicleManageApp.DangerDriveSingleList">
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<Style x:Key="HeaderStyle" TargetType="Label">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="BackgroundColor" Value="Aqua" />
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="XAlign" Value="Center" />
+				<Setter Property="YAlign" Value="Center" />
+				<Setter Property="FontSize" Value="Medium" />
+			</Style>
+			<Style x:Key="DetailStyle" TargetType="Label">
+				<Setter Property="HorizontalOptions" Value="FillAndExpand" />
+				<Setter Property="BackgroundColor" Value="White" />
+				<Setter Property="TextColor" Value="Black" />
+				<Setter Property="XAlign" Value="Center" />
+				<Setter Property="YAlign" Value="Center" />
+				<Setter Property="FontSize" Value="Small" />
+			</Style>
+			<OnPlatform x:Key="standardFont" x:TypeArguments="Font">
+				<OnPlatform.iOS>12</OnPlatform.iOS>
+				<OnPlatform.Android>12</OnPlatform.Android>
+				<OnPlatform.WinPhone>18</OnPlatform.WinPhone>
+			</OnPlatform>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	<ListView ItemsSource="{Binding DangerDriveList.Result}" HasUnevenRows="True">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="车牌：" Style="{StaticResource HeaderStyle}" Font="{StaticResource standardFont}"/>
+							<Label Text="{Binding chepaino}" Style="{StaticResource HeaderStyle}" Font="{StaticResource standardFont}"/>
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="急刹车:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala10}" Style="{StaticResource DetailStyle}" />
+							<Label Text="急加油:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala11}" Style="{StaticResource DetailStyle}" />
+							<Label Text="快速变道:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala12}" Style="{StaticResource DetailStyle}" />
+							<Label Text="弯道加速:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala13}" Style="{StaticResource DetailStyle}" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="碰撞:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala14}" Style="{StaticResource DetailStyle}" />
+							<Label Text="频繁变道:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala15}" Style="{StaticResource DetailStyle}" />
+							<Label Text="烂路高速:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala16}" Style="{StaticResource DetailStyle}" />
+							<Label Text="急转弯:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala17}" Style="{StaticResource DetailStyle}" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="翻车:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala18}" Style="{StaticResource DetailStyle}" />
+							<Label Text="异常震动:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala19}" Style="{StaticResource DetailStyle}" />
+							<Label Text="车门异常:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala20}" Style="{StaticResource DetailStyle}" />
+							<Label Text="胎压手刹异常:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala21}" Style="{StaticResource DetailStyle}" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="超速报警:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala30}" Style="{StaticResource DetailStyle}" />
+							<Label Text="水温报警:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala31}" Style="{StaticResource DetailStyle}" />
+							<Label Text="转速报警:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala32}" Style="{StaticResource DetailStyle}" />
+							<Label Text="电压报警:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala33}" Style="{StaticResource DetailStyle}" />
+						</StackLayout>
+						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+							<Label Text="故障报警:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala34}" Style="{StaticResource DetailStyle}" />
+							<Label Text="转弯:" Style="{StaticResource DetailStyle}" />
+							<Label Text="{Binding Ala35}" Style="{StaticResource DetailStyle}" />
+						</StackLayout>
+					</StackLayout>
+				</ViewCell>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+</ContentPage>

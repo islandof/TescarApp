@@ -11,7 +11,7 @@
     </ContentPage.BindingContext>-->
   <StackLayout VerticalOptions="FillAndExpand" Padding="50">
     <Frame Padding="75">
-      <Label Text="Login"
+      <Label Text="登陆"
       Font="Bold,Large"
       HorizontalOptions="Center">
         <Label.TextColor>

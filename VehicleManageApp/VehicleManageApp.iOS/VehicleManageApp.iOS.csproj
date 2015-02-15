@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E7B95CCA-779C-46FF-AAAC-5E1D0AC73FC1}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
@@ -96,8 +94,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
-    <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -218,7 +216,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\VehicleManageApp\VehicleManageApp.csproj">
-      <Project>{8470bf39-0806-447d-91f6-beba862baf08}</Project>
+      <Project>{8470BF39-0806-447D-91F6-BEBA862BAF08}</Project>
       <Name>VehicleManageApp</Name>
     </ProjectReference>
   </ItemGroup>

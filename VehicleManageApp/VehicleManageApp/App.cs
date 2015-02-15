@@ -13,32 +13,33 @@ namespace VehicleManageApp
 		public App ()
 		{
 			// The root page of your application			
-            RegisterTypes();
+			RegisterTypes ();
             
-		    var id = 0;
-            if (Application.Current.Properties.ContainsKey("USER_ID"))
-            {
-                id = (int)Application.Current.Properties["USER_ID"];
-                // do something with id
-            }
+			var id = 0;
+			if (Application.Current.Properties.ContainsKey ("USER_ID")) {
+				id = (int)Application.Current.Properties ["USER_ID"];
+				// do something with id
+			}
 
-            MainPage = id > 0 ? new NavigationPage(new MainPage()) : new NavigationPage(ViewFactory.CreatePage<LoginViewModel>());
-            #region testcase
+			//MainPage = id > 0 ? new NavigationPage(new MainPage()) : new NavigationPage(ViewFactory.CreatePage<LoginViewModel>());
+			#region testcase
 
-            //MainPage = new NavigationPage(new MainPage());
-            //MainPage = new NavigationPage(new TestPage());
+			MainPage = new NavigationPage (new MainPage ());
+			//MainPage = new NavigationPage(new TestPage());
 
-            #endregion
-        }
+			#endregion
+		}
 
-        static void RegisterTypes()
-        {
-            // This can be replaced by any number of MVVM tools. It is done this way merely because this 
-            // is not intended to be a demo of those tools.
-            ViewFactory.Register<LoginPage, LoginViewModel>();
-            ViewFactory.Register<DangerDriveList, DangerDriveListViewModel>();
-            //ViewFactory.Register<TodoItemPage, TodoItemViewModel>();
-        }
+		static void RegisterTypes ()
+		{
+			// This can be replaced by any number of MVVM tools. It is done this way merely because this 
+			// is not intended to be a demo of those tools.
+			ViewFactory.Register<LoginPage, LoginViewModel> ();
+			//ViewFactory.Register<DangerDriveList, DangerDriveListViewModel> ();
+			ViewFactory.Register<DangerDriveSingleList, DangerDriveListViewModel> ();
+			//ViewFactory.Register<TodoItemPage, TodoItemViewModel>();
+		}
+
 		protected override void OnStart ()
 		{
 			// Handle when your app starts
@@ -60,6 +61,6 @@ namespace VehicleManageApp
 
 		public static LoginViewModel LoginViewModel{ get; set; }
 
-        public static HomePageViewModel HomePageViewModel { get; set; }
+		public static HomePageViewModel HomePageViewModel { get; set; }
 	}
 }

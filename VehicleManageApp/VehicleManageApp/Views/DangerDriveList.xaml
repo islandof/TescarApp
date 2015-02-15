@@ -2,7 +2,7 @@
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VehicleManageApp.Views.DangerDriveList"
-             Title="危险驾驶">
+             Title="危险驾驶" BackgroundColor="White">
   <CarouselPage.Resources>
     <ResourceDictionary>
       <Style x:Key="HeaderStyle" TargetType="Label">
@@ -112,6 +112,54 @@
                 <Label Text="{Binding Ala19}" Style="{StaticResource DetailStyle}"/>
                 <Label Text="{Binding Ala20}" Style="{StaticResource DetailStyle}"/>
                 <Label Text="{Binding Ala21}" Style="{StaticResource DetailStyle}"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage>
+<ContentPage Title="危险驾驶5">
+    <StackLayout Orientation="Vertical">
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Label Text="车牌号" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="超速报警" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="水温报警" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="转速报警" Style="{StaticResource HeaderStyle}"/>
+      </StackLayout>
+      <ListView ItemsSource="{Binding DangerDriveList.Result}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding chepaino}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala30}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala31}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala32}" Style="{StaticResource DetailStyle}"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage>
+<ContentPage Title="危险驾驶6">
+    <StackLayout Orientation="Vertical">
+      <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+        <Label Text="车牌号" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="电压报警" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="故障报警" Style="{StaticResource HeaderStyle}"/>
+        <Label Text="转弯" Style="{StaticResource HeaderStyle}"/>
+      </StackLayout>
+      <ListView ItemsSource="{Binding DangerDriveList.Result}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Label Text="{Binding chepaino}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala33}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala34}" Style="{StaticResource DetailStyle}"/>
+                <Label Text="{Binding Ala35}" Style="{StaticResource DetailStyle}"/>
               </StackLayout>
             </ViewCell>
           </DataTemplate>
