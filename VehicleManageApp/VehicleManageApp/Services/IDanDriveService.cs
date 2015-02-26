@@ -8,8 +8,8 @@ using VehicleManageApp.Model;
 
 namespace VehicleManageApp.Services
 {
-    public interface IDanDriveService
-    {
-        Task<List<DangerDrive>> GetDangerDriveList();
-    }
+	public interface IDanDriveService
+	{
+		Task<List<DangerDrive>> GetDangerDriveList (string keyValues);
+	}
 }

@@ -39,7 +39,7 @@
 
     <!--<Button Grid.Row="0" Grid.Column="0" Text="危险驾驶" Image="dandrive.ico" Style="{StaticResource LayoutButtonStyle}"></Button>-->
     <StackLayout Grid.Row="0" Grid.Column="0"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" >
-      <Button Image="dandrive.ico" Style="{StaticResource LayoutButtonStyle}" Clicked="Button_OnClicked"/>
+      <Button Image="dandrive.ico" Style="{StaticResource LayoutButtonStyle}" Clicked="Danger_OnClicked"/>
       <Label Text="危险驾驶"  Font="{StaticResource standardFont}" Style="{StaticResource LayoutLabelStyle}"/>
     </StackLayout>
     <StackLayout Grid.Row="0" Grid.Column="1"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" >

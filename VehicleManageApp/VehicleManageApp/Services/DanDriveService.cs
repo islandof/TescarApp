@@ -9,17 +9,18 @@ using VehicleManageApp.Model;
 
 namespace VehicleManageApp.Services
 {
-    public class DanDriveService : IDanDriveService
-    {
-        public async Task<List<DangerDrive>> GetDangerDriveList()
-        {
-            var client = new HttpClient {BaseAddress = new Uri("http://cloud.tescar.cn/vehicle/")};
-            var response = await client.GetAsync("GetTboxalarmintimeData?isspec=1");
-            var itemListJson =  response.Content.ReadAsStringAsync().Result;
-            var fRows = JsonConvert.DeserializeObject<FormatRows>(itemListJson);
-            var result = JsonConvert.DeserializeObject<List<DangerDrive>>(fRows.rows.ToString());
-            return result;
-        }
+	public class DanDriveService : IDanDriveService
+	{
+		public async Task<List<DangerDrive>> GetDangerDriveList (string keyValues)
+		{
+			var client = new HttpClient { BaseAddress = new Uri ("http://cloud.tescar.cn/vehicle/") };
+		
+			var response = await client.GetAsync (string.IsNullOrEmpty (keyValues) ? "GetTboxalarmintimeData?isspec=1" : "GetTboxalarmintimeData?isspec=1&chepaino=" + keyValues);
+			var itemListJson = response.Content.ReadAsStringAsync ().Result;
+			var fRows = JsonConvert.DeserializeObject<FormatRows> (itemListJson);
+			var result = JsonConvert.DeserializeObject<List<DangerDrive>> (fRows.rows.ToString ());
+			return result;
+		}
         
-    }
+	}
 }
