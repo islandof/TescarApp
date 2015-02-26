@@ -80,6 +80,14 @@
     <Compile Include="Views\DangerDriveSingleList.xaml.cs">
       <DependentUpon>DangerDriveSingleList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\DangerDriveSinglePage.cs" />
+    <Compile Include="Views\DangerDriveSingleCell.cs" />
+    <Compile Include="Views\UnevenRowsCell.cs" />
+    <Compile Include="Views\UnevenRowsPage.cs" />
+    <Compile Include="Views\UnevenRowsXaml.xaml.cs">
+      <DependentUpon>UnevenRowsXaml.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ListViewDemoPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -104,6 +112,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\DangerDriveSingleList.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UnevenRowsXaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

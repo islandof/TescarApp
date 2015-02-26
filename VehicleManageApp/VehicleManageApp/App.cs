@@ -36,8 +36,9 @@ namespace VehicleManageApp
 			// is not intended to be a demo of those tools.
 			ViewFactory.Register<LoginPage, LoginViewModel> ();
 			//ViewFactory.Register<DangerDriveList, DangerDriveListViewModel> ();
-			ViewFactory.Register<DangerDriveSingleList, DangerDriveListViewModel> ();
+			//ViewFactory.Register<DangerDriveSingleList, DangerDriveListViewModel> ();
 			//ViewFactory.Register<TodoItemPage, TodoItemViewModel>();
+			ViewFactory.Register<DangerDriveSinglePage, DangerDriveListViewModel> ();
 		}
 
 		protected override void OnStart ()

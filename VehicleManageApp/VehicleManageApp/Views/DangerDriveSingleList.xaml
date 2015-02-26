@@ -25,10 +25,10 @@
 			</OnPlatform>
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<ListView ItemsSource="{Binding DangerDriveList.Result}" HasUnevenRows="True">
+	<ListView ItemsSource="{Binding DangerDriveList.Result}" HasUnevenRows="false">
 		<ListView.ItemTemplate>
 			<DataTemplate>
-				<ViewCell>
+				<ViewCell Height="200">
 					<StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
 						<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
 							<Label Text="车牌：" Style="{StaticResource HeaderStyle}" Font="{StaticResource standardFont}"/>

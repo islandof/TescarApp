@@ -43,11 +43,11 @@
       <Label Text="危险驾驶"  Font="{StaticResource standardFont}" Style="{StaticResource LayoutLabelStyle}"/>
     </StackLayout>
     <StackLayout Grid.Row="0" Grid.Column="1"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" >
-      <Button Image="alert2.ico" Style="{StaticResource LayoutButtonStyle}"/>
+      <Button Image="alert2.ico" Style="{StaticResource LayoutButtonStyle}" Clicked="Alert_OnClicked"/>
       <Label Text="栅栏报警" Font="{StaticResource standardFont}" Style="{StaticResource LayoutLabelStyle}"/>
     </StackLayout>
     <StackLayout Grid.Row="0" Grid.Column="2"  Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center" >
-      <Button Image="locate.ico" Style="{StaticResource LayoutButtonStyle}"/>
+      <Button Image="locate.ico" Style="{StaticResource LayoutButtonStyle}" Clicked="Locate_OnClicked"/>
       <Label Text="位置查看" Font="{StaticResource standardFont}" Style="{StaticResource LayoutLabelStyle}"/>
     </StackLayout>
 
