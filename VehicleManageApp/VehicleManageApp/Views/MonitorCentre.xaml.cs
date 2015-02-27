@@ -27,7 +27,7 @@ namespace VehicleManageApp.Views
 
 		private void Locate_OnClicked (object sender, EventArgs e)
 		{
-			Navigation.PushAsync (new DangerDriveSinglePage ());
+			//Navigation.PushAsync (new DangerDriveSinglePage ());
 		}
 
 	}

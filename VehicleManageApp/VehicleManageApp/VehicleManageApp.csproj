@@ -80,7 +80,6 @@
     <Compile Include="Views\DangerDriveSingleList.xaml.cs">
       <DependentUpon>DangerDriveSingleList.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DangerDriveSinglePage.cs" />
     <Compile Include="Views\DangerDriveSingleCell.cs" />
     <Compile Include="Views\UnevenRowsCell.cs" />
     <Compile Include="Views\UnevenRowsPage.cs" />
@@ -88,6 +87,8 @@
       <DependentUpon>UnevenRowsXaml.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\ListViewDemoPage.cs" />
+    <Compile Include="ViewModels\ZhalanAlarmListViewModel.cs" />
+    <Compile Include="ViewModels\ZhalanAlarmViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">

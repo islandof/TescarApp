@@ -11,10 +11,10 @@ using Xamarin.Forms;
 
 namespace VehicleManageApp.ViewModels
 {
-	public class DangerDriveListViewModel : BaseViewModel
+	public class ZhalanAlarmListViewModel : BaseViewModel
 	{
 
-		public DangerDriveListViewModel ()
+		public ZhalanAlarmListViewModel ()
 		{		
 			//TaskDangerDriveList = new NotifyTaskCompletion<List<DangerDriveViewModel>> (GetDangerDriveList (""));
 			//DangerDriveList = (new NotifyTaskCompletion<List<DangerDriveViewModel>> (GetDangerDriveList (""))).Result;
