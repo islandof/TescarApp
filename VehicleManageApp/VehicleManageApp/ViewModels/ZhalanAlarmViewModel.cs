@@ -12,74 +12,58 @@ namespace VehicleManageApp.ViewModels
 	public class ZhalanAlarmViewModel : BaseViewModel
 	{
         
-		private readonly DangerDrive _dangerDrive;
+		//private readonly DangerDrive _dangerDrive;
 
-		public ZhalanAlarmViewModel (DangerDrive dangerDrive)
+		public ZhalanAlarmViewModel (ZhalanAlarm zhalanAlarm)
 		{
-			_dangerDrive = dangerDrive;
-			ownercompanyname = dangerDrive.ownercompanyname;
-			chepaino = dangerDrive.chepaino;
-			Ala10 = dangerDrive.Ala10;
-			Ala11 = dangerDrive.Ala11;
-			Ala12 = dangerDrive.Ala12;
-			Ala13 = dangerDrive.Ala13;
-			Ala14 = dangerDrive.Ala14;
-			Ala15 = dangerDrive.Ala15;
-			Ala16 = dangerDrive.Ala16;
-			Ala17 = dangerDrive.Ala17;
-			Ala18 = dangerDrive.Ala18;
-			Ala19 = dangerDrive.Ala19;
-			Ala20 = dangerDrive.Ala20;
+			//	_dangerDrive = zhalanAlarm;
 
-			Ala21 = dangerDrive.Ala21;
+			alarmid = zhalanAlarm.alarmid;
+			tboxid = zhalanAlarm.tboxid;
+			qicheid = zhalanAlarm.qicheid;
+			xingchengid = zhalanAlarm.xingchengid;
+			zhalanid = zhalanAlarm.zhalanid;
+			zhalantype = zhalanAlarm.zhalantype;
+			zhalanname = zhalanAlarm.zhalanname;
+			condition = zhalanAlarm.condition;
+			dthappen = zhalanAlarm.dthappen;
+			hasalarm = zhalanAlarm.hasalarm;
+			createtime = zhalanAlarm.createtime;
+			ownercompanyname = zhalanAlarm.ownercompanyname;
+			chepaino = zhalanAlarm.chepaino;
+			ownercompanyid = zhalanAlarm.ownercompanyid;
+			companyid = zhalanAlarm.companyid;
 
-			Ala30 = dangerDrive.Ala30;
-			Ala31 = dangerDrive.Ala31;
-			Ala32 = dangerDrive.Ala32;
-			Ala33 = dangerDrive.Ala33;
-			Ala34 = dangerDrive.Ala34;
-			Ala35 = dangerDrive.Ala35;
 		}
 
-		public string ownercompanyname { get; set; }
+		public string alarmid { get; set; }
+
+		public string tboxid { get; set; }
+
+		public string qicheid { get; set; }
+
+		public string xingchengid { get; set; }
+
+		public string zhalanid { get; set; }
+
+		public string zhalantype { get; set; }
+
+		public string zhalanname { get; set; }
+
+		public string condition { get; set; }
+
+		public string dthappen { get; set; }
+
+		public string hasalarm { get; set; }
+
+		public string createtime { get; set; }
 
 		public string chepaino { get; set; }
 
-		public string Ala10 { get; set; }
+		public string ownercompanyid { get; set; }
 
-		public string Ala11 { get; set; }
+		public string ownercompanyname { get; set; }
 
-		public string Ala12 { get; set; }
-
-		public string Ala13 { get; set; }
-
-		public string Ala14 { get; set; }
-
-		public string Ala15 { get; set; }
-
-		public string Ala16 { get; set; }
-
-		public string Ala17 { get; set; }
-
-		public string Ala18 { get; set; }
-
-		public string Ala19 { get; set; }
-
-		public string Ala20 { get; set; }
-
-		public string Ala21 { get; set; }
-
-		public string Ala30 { get; set; }
-
-		public string Ala31 { get; set; }
-
-		public string Ala32 { get; set; }
-
-		public string Ala33 { get; set; }
-
-		public string Ala34 { get; set; }
-
-		public string Ala35 { get; set; }
-
+		public string companyid { get; set; }
 	}
 }

@@ -21,28 +21,27 @@ namespace VehicleManageApp.ViewModels
 
 			Firstload ();
 			this.SearchBarCommand = new Command (async (nothing) => {
-				DangerDriveList = await GetDangerDriveList (keyValues);
+				ZhalanAlarmList = await GetData (keyValues);
 
 			});
 		}
 
 		private async void Firstload ()
 		{
-			DangerDriveList = await GetDangerDriveList ("");
+			ZhalanAlarmList = await GetData ("");
 		}
 
-		private async Task<List<DangerDriveViewModel>> GetDangerDriveList (string keyValues)
+		private async Task<List<ZhalanAlarmViewModel>> GetData (string keyValues)
 		{
-			var _dangerDriveService = new DanDriveService ();
-			var result = await _dangerDriveService.GetDangerDriveList (keyValues);
-			return result.Select (n => new DangerDriveViewModel (n)).ToList ();
+			var _service = new ZhalanAlarmService ();
+			var result = await _service.GetZhalanAlarmList (keyValues);
+			return result.Select (n => new ZhalanAlarmViewModel (n)).ToList ();
 			//return result;
 		}
 
-		public NotifyTaskCompletion<List<DangerDriveViewModel>> TaskDangerDriveList { get; private set; }
 
-		public List<DangerDriveViewModel> DangerDriveList { 
-			get { return GetValue<List<DangerDriveViewModel>> (); } 
+		public List<ZhalanAlarmViewModel> ZhalanAlarmList { 
+			get { return GetValue<List<ZhalanAlarmViewModel>> (); } 
 			set { SetValue (value); } 
 		}
 

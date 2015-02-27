@@ -21,17 +21,17 @@ namespace VehicleManageApp.ViewModels
 
 			Firstload ();
 			this.SearchBarCommand = new Command (async (nothing) => {
-				DangerDriveList = await GetDangerDriveList (keyValues);
+				DangerDriveList = await GetData (keyValues);
 
 			});
 		}
 
 		private async void Firstload ()
 		{
-			DangerDriveList = await GetDangerDriveList ("");
+			DangerDriveList = await GetData ("");
 		}
 
-		private async Task<List<DangerDriveViewModel>> GetDangerDriveList (string keyValues)
+		private async Task<List<DangerDriveViewModel>> GetData (string keyValues)
 		{
 			var _dangerDriveService = new DanDriveService ();
 			var result = await _dangerDriveService.GetDangerDriveList (keyValues);

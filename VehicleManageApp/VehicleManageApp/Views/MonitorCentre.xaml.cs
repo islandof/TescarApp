@@ -22,7 +22,7 @@ namespace VehicleManageApp.Views
 
 		private void Alert_OnClicked (object sender, EventArgs e)
 		{
-			Navigation.PushAsync (new ListViewDemoPage ());
+			Navigation.PushAsync (ViewFactory.CreatePage<ZhalanAlarmListViewModel> ());
 		}
 
 		private void Locate_OnClicked (object sender, EventArgs e)

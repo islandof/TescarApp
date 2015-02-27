@@ -89,6 +89,11 @@
     <Compile Include="Views\ListViewDemoPage.cs" />
     <Compile Include="ViewModels\ZhalanAlarmListViewModel.cs" />
     <Compile Include="ViewModels\ZhalanAlarmViewModel.cs" />
+    <Compile Include="Model\ZhalanAlarm.cs" />
+    <Compile Include="Services\ZhalanAlarmService.cs" />
+    <Compile Include="Views\ZhalanAlarmList.xaml.cs">
+      <DependentUpon>ZhalanAlarmList.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -116,6 +121,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UnevenRowsXaml.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ZhalanAlarmList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
