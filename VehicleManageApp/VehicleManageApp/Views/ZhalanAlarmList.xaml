@@ -24,25 +24,23 @@
 			</Style>
 		</ResourceDictionary>
 	</ContentPage.Resources>
-	<StackLayout Orientation="Vertical">
+	<StackLayout Orientation="Vertical" WidthRequest="200" HeightRequest="200">
 			<StackLayout Padding="10,5,10,5">
 				<SearchBar Text="{Binding keyValues,Mode=TwoWay}"  Style="{StaticResource SearchBarStyle}" SearchCommand="{Binding SearchBarCommand}" />
 			</StackLayout>
 			<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-				<Label Text="车牌号" Style="{StaticResource HeaderStyle}" />
-				<Label Text="发生时间" Style="{StaticResource HeaderStyle}" />
-				<Label Text="栅栏名字" Style="{StaticResource HeaderStyle}" />
-				<Label Text="条件" Style="{StaticResource HeaderStyle}" />
+				<Label Text="车牌号" Style="{StaticResource HeaderStyle}" HorizontalOptions="StartAndExpand"/>
+				<Label Text="发生时间" Style="{StaticResource HeaderStyle}" HorizontalOptions="CenterAndExpand"/>
+				<Label Text="栅栏名字" Style="{StaticResource HeaderStyle}" HorizontalOptions="EndAndExpand"/>
 			</StackLayout>
 			<ListView ItemsSource="{Binding ZhalanAlarmList,Mode=OneWay}" HasUnevenRows="True">
 				<ListView.ItemTemplate>
 					<DataTemplate>
 						<ViewCell>
 							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-								<Label Text="{Binding chepaino,Mode=OneWay}" Style="{StaticResource DetailStyle}" />
-								<Label Text="{Binding dthappen,Mode=OneWay}" Style="{StaticResource DetailStyle}" />
-								<Label Text="{Binding zhalanname,Mode=OneWay}" Style="{StaticResource DetailStyle}" />
-								<Label Text="{Binding zhalanname,Mode=OneWay}" Style="{StaticResource DetailStyle}" />
+								<Label Text="{Binding chepaino,Mode=OneWay}" Style="{StaticResource DetailStyle}" HorizontalOptions="Start"/>
+								<Label Text="{Binding dthappen,Mode=OneWay}" Style="{StaticResource DetailStyle}" HorizontalOptions="Center"/>
+								<Label Text="{Binding zhalanname,Mode=OneWay}" Style="{StaticResource DetailStyle}" HorizontalOptions="End"/>
 							</StackLayout>
 						</ViewCell>
 					</DataTemplate>
